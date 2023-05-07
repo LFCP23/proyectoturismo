@@ -1,0 +1,603 @@
+/* selector universal */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+   font-family: 'Sofia Sans Condensed', sans-serif;
+
+}
+
+/* por scroll */
+html { overflow-x:hidden !important}
+
+
+/*saco el subrayado a todos los enlaces */
+a {
+    text-decoration: none; /*le saco el subrayado */
+}
+
+
+.contenedor {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+}
+
+.margen-titulo {
+    background-color: rgb(9,74,136);
+    /*color: #272626;*/
+    color: #ececec;
+    text-transform: uppercase;
+    letter-spacing: 0.13rem;
+}
+
+.margen-seccion {
+    letter-spacing: 0.5rem;
+    font-size: 1.5rem;
+}
+.margen-seccion  a{
+    color: #ececec;
+}
+.margen-seccion a:hover {
+    color:rgb(93, 218, 246);
+}
+
+/* ENCABEZADO */
+.encabezado {
+    height:6.87rem; /*110px-- cambio de logo 70px;rn-logo1 */
+    display: flex;
+    /*flex-flow:row nowrap; nuevo*/
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.logo { 
+    margin:0.5rem;
+}
+
+
+.menulist {
+    list-style:none; /* le saca la viñeta */ 
+    display:flex;
+    gap: 1rem;
+}
+.menulist li {
+    font-size: 1rem;
+    padding: 0 0.6rem;
+}
+
+.menulist li a {
+    color:#ececec;
+    font-weight: bold;
+}
+
+.abrir-menu,
+.cerrar-menu {
+    display: none;
+}
+
+.menulist a:hover {
+    color:rgb(93, 218, 246);
+}
+/* FIN ENCABEZADO */
+
+
+/* CONTENIDO */
+/* seccion principal */
+.principal {
+    display: flex;
+    flex-flow:column nowrap;
+}
+
+/* Destino */
+.destino {
+    height: 565px;/*543px;*/
+    width: 100%;
+    position: relative;
+}
+
+
+.destino-img img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.destino-texto {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #fff;
+	text-shadow: 1px 1px black;
+}
+
+.destino-texto h1 {
+    position: absolute;
+    width: 100%;
+    bottom: 45%;
+    left:35%;
+    font-size: 6vw;
+}
+/*fin zona destino*/
+
+.destino-media {
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 2.5rem;
+}
+
+.destino-media-titulo {
+    text-align: center;
+} 
+
+.destino-media-titulo h2 {
+    font-size: 3rem;
+    word-spacing: 0.3rem;
+    margin: 1.5rem 0 1.5rem 0;
+    color:#5572f5;
+}
+
+
+.destino-media-titulo  p {
+    font-size: 2rem;
+    word-spacing: 0.3rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+}
+
+.destino-media-titulo-descrip {
+    text-align: center;
+} 
+
+.destino-media-titulo-descrip p {
+    margin: 0.06rem 0;
+    font-size: 1.5rem; /*1.7rem*/
+    color: #696868;
+}
+
+
+.destino-media-titulo-descrip p:last-child {
+    margin-bottom: 3rem;
+    font-size:2rem;
+    color: #000;
+}
+
+.destino-media-video {
+    overflow: hidden;
+    position: relative;
+    height: 0;
+    padding-bottom:42.85%;
+}
+
+.destino-media-video iframe {
+    display: flex; 
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height:100%;
+}
+
+
+/* Regiones */
+.regiones{
+    display: flex;
+    flex-flow: column nowrap;
+    
+}
+.regiones-titulo{
+    text-align: center;
+} 
+.regiones-descrip {
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+    margin-top:2rem;
+    padding: 1rem 0 1rem;
+}
+
+.regiones-descrip p {
+    letter-spacing: 1px;
+}
+.regiones-descrip h2 {
+    color:#5572f5;
+}
+
+.regiones-card {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.card {
+    position: relative;
+    width: 17.5rem;
+    height: 21.87rem;
+    /*width:280px;
+    height: 350px;*/
+    margin: 0.62rem;/*10px;*/
+}
+.card .cara {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    overflow: hidden;
+    transition:.5s;
+}
+
+.card .frente {
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 0.31rem 0.62rem #000; /*0 5px 10px negro*/
+}
+.card .frente img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .frente h3 {
+    position: absolute;
+    bottom:0;
+    width: 100%;
+    height: 2.81rem;/*45px;*/
+    line-height: 2.81rem;/*45px*/;
+    color: #fff;
+    background-color: rgba(0,0,0,.4);
+    text-align: center;
+}
+
+.card .dorso {
+    transform: perspective(600px) rotateY(180deg);
+    background-color: rgb(3,35,54);
+    padding: 0.93rem;/*15px;*/
+    color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 0.31rem 0.62rem #000; /* 0 5px 10px negro*/
+}
+
+.card .dorso .detalle {
+    border-top: 1px solid #f3f3f3;
+    height: 3.125rem;/*50px;*/
+    line-height: 3.125rem;/*50px;*/
+}
+
+.card .dorso .detalle a {
+    color: #f3f3f3;
+}
+.card .dorso h3 {
+    font-size: 1.25rem; /*20px;*/ 
+    margin-top:0.312rem;/*5px;*/ /*20px*/
+    letter-spacing: 0.125rem;/*2px;*/
+}
+
+.card .dorso p {
+    letter-spacing: 1px;
+}
+
+.card:hover .frente  {
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.card:hover .dorso {
+    transform: perspective(600px) rotateY(360deg);
+} 
+
+
+/* Seccion imperdibles */
+.imperdibles {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.imperdibles-titulo {
+    text-align: center;
+}
+
+.imperdibles-articulos {
+    display: flex;
+    flex-wrap:wrap;
+    margin:1rem;
+    justify-content:space-around;
+    min-height: 100vh;
+}
+
+.imperdibles-arti {
+    width:30%;
+    font-size:0.82rem; /* 13px;*/
+    letter-spacing: 0.06rem;
+    margin-top:1.50rem;
+    margin-bottom: 1.50rem;
+    color: #000;
+    background-color:#ececec;
+    /*border:0.5rem solid rgba(236,236,236,0.5);*/
+    text-align: center;
+    box-shadow: 0.125rem 0.125rem 0.3rem 0; /* 2 2 4 0*/
+}
+
+
+.imperdibles-arti img {
+    width:100%; 
+    height: auto;
+    display: block;
+    margin:0;
+}
+/*
+.imperdibles-arti img:hover {
+    transform: scale(1.5);
+}
+*/
+.imperdibles-articulo-texto {
+    letter-spacing: 0.06rem;
+    line-height: 1.56rem /*25px*/;
+}
+
+.imperdibles-articulo-texto h3 {
+    width: 100%;
+    height: 100%;
+    padding: 0.93rem;
+    font-size: 1.25rem; /*20px;*/
+    color: #121212;
+}
+.imperdibles-articulo-texto p {
+    width: 100%;
+    height: 100%;
+    padding: 0.93rem;
+    font-size:1rem; /*0.87rem;/*14px;*/
+}
+/* Fin imperdibles */
+
+
+/* Informacion */
+.informacion {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.informacion-titulo {
+    text-align: center;
+}
+
+.datos-utiles-cards {
+    display: flex;
+    flex-wrap:wrap; 
+    justify-content:center;
+    /*min-width: 100vw;*/
+    margin: 1.25rem 0 1.25rem;
+    min-height: 100vh;
+}   
+
+.datos-utiles-card {
+    width: 33%;
+    /*border: 0.1rem solid #343434; ver*/
+    margin: 1rem;
+}
+
+.datos-utiles-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 0;
+}
+
+.datos-utiles-card-texto {
+    text-align: center;
+    letter-spacing: 0.06rem;
+    line-height: 1.56rem;
+}
+
+.datos-utiles-card-texto h3 {
+    margin-top: 0;
+    font-size: 1.25rem;
+    margin-top:-6px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #ececec;
+    padding: 0.9rem;
+
+}
+.datos-utiles-card-texto p {
+    font-size: 1.15rem;
+    padding: 0.9rem;
+}
+/* fin zona principal*/
+
+
+/*Inicio de pie */
+.pie {
+    /*height: 100%; */
+    /*max-width: 100vm;*/
+    width: 100%;
+    color: #ececec;
+}
+
+.grupo1 {
+    display: flex;
+    /*flex: row nowrap; */
+    flex-direction: row;
+    justify-content:space-between;
+    width: 100%;
+    padding: 1rem 0;
+}
+
+.pie-titulo {
+   margin: 0.5rem;
+}
+
+
+.pie-oficinas-turismo {
+    margin: 0.5rem;
+    text-align: center;
+}
+.sede p:first-child {
+    font-weight: bold;
+}
+
+.pie-social {
+    margin: 0.5rem;
+}
+
+.pie-social a {
+    color: #ececec;
+    display: inline-block;
+    width: 2.8rem;
+    height: 2.8rem;
+    line-height: 2.8rem;
+    /*transition: all 300ms ease;*/
+}
+.pie-social a:hover {
+    color:rgb(93, 218, 246);
+}
+
+
+.grupo2 {
+    text-align: center;
+    padding: 1rem 0.7rem;
+    background-color: #0a1a2a;
+} 
+.grupo2 .small {
+    font-size: 0.9rem;
+}
+
+
+
+@media all and (max-width:600px) {
+
+    .abrir-menu,
+    .cerrar-menu {
+        display: block;
+        border:0;
+        font-size: 1.25rem;
+        background-color: transparent;
+        cursor: pointer;
+        padding: 1rem; /*agregue por el icono hamburguesa*/
+    }
+
+    .abrir-menu {
+        color: #343434;
+    }
+
+    .cerrar-menu {
+        color:#ececec;
+    }
+
+    .menubar {
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap:1rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #1c1c1c;
+        padding:0.5rem;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+        z-index:9999;
+        
+    }
+    /*con javascript */
+    .menubar.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .menulist {
+        flex-direction: column;
+        align-items: end;
+    }
+    .menulist li a {
+        color: #ececec;
+    }
+
+    .imperdibles-articulos {
+        flex-direction: column;
+        justify-content: center;
+        margin:0.5rem;/*1rem;*/
+    }
+    .imperdibles-arti {
+        width: 90%;
+        margin:1rem;
+    }
+        
+    .imperdibles-articulo-texto {
+        line-height: 1.25rem;
+    }
+    
+    .imperdibles-articulo-texto h3 {
+        padding: 0.5rem;
+    }
+    .imperdibles-articulo-texto p {
+        padding: 0.5rem;
+    }
+}
+
+@media all and (max-width:468px) {
+    
+    .destino-media-titulo h2 {
+        font-size: 1.8rem/*3rem;*/
+        /*word-spacing: 0.3rem;*/
+    }
+    
+    
+    .destino-media-titulo p {
+        font-size: 1.20rem; /*2rem; 60%menos*/
+        /*word-spacing: 0.3rem;
+        font-weight: 700;
+        margin-bottom: 3rem;*/
+    }
+    
+    
+    .destino-media-titulo-descrip p {
+        font-size: 0.9rem; /*1.5rem;*/
+    }
+    
+    .destino-media-titulo-descrip p:last-child {
+        font-size:1.20rem;/*2rem;*/
+    }
+    
+    /* Regiones */
+    .regiones-descrip {
+        font-size: 1.2rem; /*2rem*/
+        padding: 1rem 0 1rem;
+    }
+
+    .datos-utiles-cards {
+        flex-direction:column;
+    }   
+    
+    .datos-utiles-card {
+        width: 90%;
+        /*margin: 1rem; */
+    }
+        
+    .datos-utiles-card-texto {
+        text-align: center;
+        /*letter-spacing: 0.06rem;
+        line-height: 1.56rem;*/
+    }
+
+    .grupo1 {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    
+}
+
+
+
