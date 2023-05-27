@@ -5,18 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!--
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:wght@200&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Montserrat:wght@300&family=Roboto:wght@300;500;700&family=Sofia+Sans+Condensed:wght@200&display=swap" rel="stylesheet">
-    -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Montserrat:wght@300&family=Sofia+Sans+Condensed:wght@200&display=swap" rel="stylesheet">
-
     <script src="https://kit.fontawesome.com/aef7430fa2.js" crossorigin="anonymous"></script>
     
     <link rel="stylesheet" href="css/style.css">
@@ -24,11 +15,8 @@
 </head>
 <body>
     <div class="contenedor">
-        <header class="encabezado margen-titulo">
-            <!-- <div class="logo"> -->
-                <a href="index.html" class="logo"> <img src="img/rn-logo.png" alt="Logo Río Negro"></a>
-                <!-- <a href="index.html" class="logo"> <img src="img/logo-rionegro1.png" alt="Logo Río Negro"></a> -->
-            <!-- </div> -->
+        <header class="encabezado margen-titulo">            
+            <a href="index.html" class="logo"> <img src="img/rn-logo.png" alt="Logo Río Negro"></a>
             <button id="abrir" class="abrir-menu"><i class="fa-solid fa-bars fa-xl"></i></button>
             <nav class="menubar" id="menubar">
                 <button id="cerrar" class="cerrar-menu"><i class="fa-solid fa-xmark fa-xl"></i></button>
@@ -37,6 +25,7 @@
                     <li><a href="#regiones">Regiones</a></li>
                     <li><a href="#imperdibles">Imperdibles</a></li>
                     <li><a href="#informacion">Curiosidades</a></li>
+                    <li><a href="#datosgral">Datos útiles</a></li>
                 </ul>
             </nav> 
         </header>
@@ -86,7 +75,7 @@
                             <p>Se encuentra la localidad de Bariloche, de hermosos paisajes y amplia
                                 infraestructura turística, lindera con el Parque Nacional Nahuel Huapi.
                                 Esta magnífica ciudad es considerada como uno de los centros turísticos de 
-                                mayor envergadura de la Patagonia Argentina. Hoy, brinda al turista la 
+                                mayor envergadura de la Patagonia Argentina. Hoy brinda al turista la 
                                 posibilidad de asistir a centros de esquí de calidad y reconocimiento a nivel mundial.
                                 <br>Hacia el sur se encuentra la localidad de El Bolsón famosa por sus verdes 
                                 bosques y montañas y su clima benigno.</p>
@@ -127,7 +116,7 @@
                         </div>
                         <div class="cara dorso">
                             <h3>Mar</h3>
-                            <p>El camino de la costa atlántica conocido como Ruta de acantatilados con diferentes balnearios, con una gran diversidad de playas de arena o pedregosas, que se extienden por cientos de metros entre el mar y los acantilados formándose, en algunos lugares, piletones naturales de aguas cálidas<br>Se puede disfrutar de paseos naúticos para realizar avistaje de delfines, ballenas, lobos marinos e inumperables especies de aves.</p>
+                            <p>El camino de la costa atlántica conocido como Ruta de acantatilados con diferentes balnearios, con una gran diversidad de playas de arena o pedregosas, que se extienden por cientos de metros entre el mar y los acantilados, formándose en algunos lugares piletones naturales de aguas cálidas.<br>Se puede disfrutar de paseos naúticos para realizar avistaje de delfines, ballenas, lobos marinos e inumperables especies de aves.</p>
                             <div class="detalle"><a href="#">Detalle</a></div>
                         </div>
                     </div>
@@ -220,9 +209,6 @@
                             <p>El Tren Patagónico nocturno ofrece una travesía que une San Carlos de Bariloche con la estación Perito Moreno.
                                 Es una experiencia inolvidable, atravesando la estepa patagónica. Este viaje se realiza de Miércoles a Sábado.</p>             
                             </p>
-                            <!-- <p>De todas las maneras que el visitante tiene de conocer y recorrer la provincia hay una muy especial: a bordo del Tren Patagónico.
-                            Es una experiencia inolvidable, atravesando la estepa patagónica y uniendo el océano con la cordillera (Viedman - San Carlos de Bariloche)</p>
-                            </p> -->
                         </div>
                     </article>
                     <article class="datos-utiles-card">
@@ -231,7 +217,7 @@
                             <h3>Feria Artesanal</h3>
                             <p>La feria del Bolsón es una de la más grande e importante de sudamérica.
                             Participa un gran número de artesanos, artistas y productores de toda
-                            la comarca. Se desarrolla los Martes, Jueves, Sábados y Domingo
+                            la comarca. Se desarrolla los Martes, Jueves, Sábados y Domingos
                             de 10 a 16hs.
                             </p>
                         </div>
@@ -258,6 +244,41 @@
                             </p>
                         </div>
                     </article>
+                </div>
+            </section>
+            <section class="datosgral">
+                <div class="datosgral-titulo margen-titulo margen-seccion">
+                    <a name="datosgral"></a>
+                    <a href="index.html"><h2>Datos Útiles</h2></a>
+                </div>
+                <div class="climas">
+                    <div id="clima"></div>
+                    <div id="contenedor-clima">
+                        <div class="caja" id="caja1">
+                            <h2 class="ciudad"></h2>
+                            <h2 class="temperatura"></h2>
+                            <h3 class="clima"></h3>
+                        </div>
+                        <div class="caja" id="caja2">
+                            <h2 class="ciudad"></h2>
+                            <h2 class="temperatura"></h2>
+                            <h3 class="clima"></h3>
+                        </div>
+                
+                        <div class="caja" id="caja3">
+                            <h2 class="ciudad"></h2>
+                            <h2 class="temperatura"></h2>
+                            <h3 class="clima"></h3>
+                        </div>
+                        <div class="caja" id="caja4">
+                            <h2 class="ciudad"></h2>
+                            <h2 class="temperatura"></h2>
+                            <h3 class="clima"></h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="mapa">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3730360.9929534835!2d-67.8738185033377!3d-39.844496966764886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1685201456625!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </section>
         </main>
@@ -305,6 +326,7 @@
         </footer>
     </div>
     <script src="js/main.js"> </script>
+    <script src="js/appclima.js"></script>
 
 </body>
 </html>

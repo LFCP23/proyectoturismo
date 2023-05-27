@@ -411,6 +411,70 @@ a {
     font-size: 1.15rem;
     padding: 0.9rem;
 }
+
+/*Ubicacion y App Clima*/
+.datosgral {
+    display: flex;
+    flex-flow: column nowrap;
+}
+.datosgral-titulo {
+    text-align: center;
+}
+
+.climas {
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: #3494E6;
+    background: -webkit-linear-gradient(to right, #EC6EAD, #3494E6);
+    background: linear-gradient(to right, #EC6EAD, #3494E6);
+    margin: 1.25rem 0 1.25rem;
+}
+
+#clima {
+    font-size:1.25rem;
+    font-weight: 700;
+}
+
+#contenedor-clima {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 0.625rem;
+}
+
+#caja1, #caja2, #caja3, #caja4{
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 20%;
+    width: 12.5rem;
+    height: 9.37rem;
+}
+
+#caja1 {
+    background-color: rgba(0,0,0,0.767);
+    color:azure;    
+}
+#caja2 {
+    background-color: #5d024e;
+    color:azure;    
+}
+#caja3 {
+    background-color:  #483d8b;
+    color:azure;    
+}
+#caja4 {
+    background-color:#2ab2ea;
+    color:azure; 
+}
+.mapa {
+    display: flex;
+    justify-content: center;
+    margin: 1.25rem 0 1.25rem;
+}
 /* fin zona principal*/
 
 
@@ -470,7 +534,16 @@ a {
     font-size: 0.9rem;
 }
 
-
+@media all and (max-width:855px) {
+    #caja1, #caja2, #caja3, #caja4{
+        width: 9.37rem;
+        height: 9.37rem;
+        font-size:1rem;
+    }
+    #contenedor-clima {
+        grid-gap: 0.12rem;
+    }
+}
 
 @media all and (max-width:600px) {
 
@@ -543,6 +616,24 @@ a {
     .imperdibles-articulo-texto p {
         padding: 0.5rem;
     }
+
+    .climas{
+        height: 75vh;
+    }
+    #contenedor-clima {
+        text-align: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 0.625rem;
+    }
+    #caja1, #caja2, #caja3, #caja4{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        width: 12.5rem;
+        height: 9.37rem;
+    }
+
 }
 
 @media all and (max-width:468px) {
@@ -595,6 +686,25 @@ a {
         width: 100%;
         align-items: center;
         justify-content: center;
+    }
+
+    .climas{
+        height: 100vh;
+    }
+
+    #clima {
+        font-size:1rem;
+    }
+    #contenedor-clima {
+        text-align: center;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 0rem;
+    }
+    #caja1, #caja2, #caja3, #caja4{
+        width: 9.37rem;
+        height: 9.37rem;
+        font-size:1rem;
     }
     
 }
